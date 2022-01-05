@@ -1,7 +1,7 @@
 const selectRayon = $('#rayon');
 let listRayon = [];
 
-totalRayon.forEach(function(val, index) {
+totalRayon.forEach(function(val) {
     for (let i = 1; i <= parseInt(val.split("_").pop()); i++) {
         let rayon = val.substring(0, val.length - 1) + i;
 
@@ -15,17 +15,15 @@ $(function(){
     $('.submit-progress').css("display","none");
 });
 
-const startSpamming = () => {
-    if (
-        timeStart.val() === '' || noAbsen.val() === '' || !isIslam.is(':checked')
-    ) {
+$('#gas').click(function() {
+    if (timeStart.val() === '' || noAbsen.val() === '') {
         console.log(isIslam.is(':checked'), noAbsen.val(), timeStart.val())
         return alert('isi lkh rayon / no absen / agama');
     }
 
     let formId = idsRayon[rayon.prop('selectedIndex')];
     spamLKH(formId);
-}
+});
 
 // new Date(new Date().toLocaleDateString('id-ID', { timeZone: 'Asia/Jakarta' }))
 const spamLKH = async (formId) => {
@@ -37,6 +35,7 @@ const spamLKH = async (formId) => {
 
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#loading').html('cek inspect element -> console <bold>mas</bold>')
+        if (time.getDay() === 0) continue;
 
         await submitForm(formId, time, fillQuestion);
     }
