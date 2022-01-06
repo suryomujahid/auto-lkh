@@ -9,7 +9,7 @@ totalRayon.forEach(function(val) {
 });
 
 $(function(){
-    document.getElementById('time-start').max = new Date(new Date().toLocaleDateString('id-ID', { timeZone: 'Asia/Jakarta' })).toISOString().split("T")[0];
+    document.getElementById('time-start').max = new Date().toISOString().split("T")[0];
     $('.submit-progress').css("display","none");
 });
 
