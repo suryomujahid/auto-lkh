@@ -28,8 +28,8 @@ const spamLKH = async (formId) => {
     await getFormQuestions(formId);
     
     let now = new Date;
-    let randomNum1 = Math.floor(Math.random() * 9);
-    let randomNum2 = Math.floor(Math.random() * 9);
+    let randomNum1 = Math.floor(Math.random() * 12);
+    let randomNum2 = Math.floor(Math.random() * 12);
     $('#terminal-wannabe-textarea').append(
         `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
     );
