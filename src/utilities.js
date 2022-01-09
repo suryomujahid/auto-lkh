@@ -16,7 +16,7 @@ const getFormQuestions = (formId) => {
             });
         },
         error: function(error) {
-            console.log(error);
+            alert("Nyalakan extension \"Allow CORS\"!");
         }
     });
 }

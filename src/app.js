@@ -46,7 +46,7 @@ const spamLKH = async (formId) => {
         $('#gas').prop('disabled', true);
         if (time.getDay() === 0) continue;
 
-        // await submitForm(formId, time, fillQuestion);
+        await submitForm(formId, time, fillQuestion);
     }
 
     $('#gas').prop('disabled', false);
