@@ -45,6 +45,9 @@ const tauntMessage = [
     'sedang melihat galeri anda',
     'sedang melaporkan ke tukang baso',
     'sedang menghack FB anda',
+    'sedang mengambil kode nuklir Amerika',
+    'sedang menghubungi Kim Jong Un',
+    'sedang mengirim data ke ormas',
 ]
 
 const tauntMessage2 = [
@@ -57,6 +60,9 @@ const tauntMessage2 = [
     'Sedang melaporkan ke pembimbing rayon anda',
     'Data sudah masuk dark web',
     'Akun penting anda sudah di hack',
+    'Rudal telah dikirim ke Israel',
+    'Ingfo sudah diterima Pak Jokowi',
+    'Nasi bungkus sudah diterima',
 ]
 
 const rayon = $("#rayon");
