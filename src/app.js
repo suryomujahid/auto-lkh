@@ -9,7 +9,9 @@ totalRayon.forEach(function(val) {
 });
 
 $(function(){
-    document.getElementById('time-start').max = new Date().toISOString().split("T")[0];
+    let date = new Date()
+    date.setDate(date.getDate() - 1);
+    document.getElementById('time-start').max = date.toISOString().split("T")[0];
     $('.submit-progress').css("display","none");
 });
 

@@ -8,24 +8,32 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 <body>
-    <div class="d-flex justify-content-center flex-column align-items-center">
-        <h1>AutoLKH</h1>
-        <a href="#tutorial">Click for Tutorial</a>
-        <div class="form-group mb-0 w-25">
+    <div class="container d-flex flex-column px-md-5">
+        <div class="text-center mt-3">
+            <h1>AutoLKH</h1>
+            <a href="#tutorial">Click for Tutorial</a>
+        </div>
+        <div class="form-group mb-0">
             <label class="form-label mt-1 mr-2" for="rayon"><h4>Rayon :</h4></label>
             <select class="form-select form-control" name="rayon" id="rayon">
             </select>
         </div>
-        <div class="form-group mb-0 w-25">
+        <div class="form-group mb-0">
             <label for="time_start" class="form-label mt-3 mb-1"><h4>Dari :</h4></label>
-            <input type="date" class="form-control" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'/>
-            <label for="time_start" class="form-label mt-2"><h5>Sampai Hari Ini</h5></label>
+            <div class="row d-flex align-items-center">
+                <div class="col-7">
+                    <input type="date" class="form-control" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'/>
+                </div>
+                <div class="col-5 align-items-center">
+                    <h5 class="m-0">- sampai hari ini</h5>
+                </div>
+            </div>
         </div>
-        <div class="form-group w-25">
+        <div class="form-group">
             <label for="no_absen" class="form-label mt-2 mb-1"><h4>No Absen :</h4></label>
             <input type="number" name="no_absen" id="no-absen" class="form-control"/>
         </div>
-        <fieldset class="form-group w-25 mb-2">
+        <fieldset class="form-group mb-2">
             <legend class="mt-4">Additional Info</legend>
             <div class="form-check">
                 <input class="form-check-input" type="checkbox" id="religion" name="religion" disabled>
@@ -40,11 +48,13 @@
                 </label>
             </div>
         </fieldset>
-        <button id="gas" type="button" class="btn btn-lg btn-dark bg-dark text-white">Gaskeun</button><br>
+        <div class="text-center">
+            <button id="gas" type="button" class="btn btn-lg btn-dark bg-dark text-white w-50 py-3">Gaskeun</button><br>
+        </div>
         <h2 id="loading"></h2>
     </div>
 
-    <div class="row mx-5">
+    <div class="row mx-5 mt-5">
         <div class="col" id="tutorial">
             <h2>How To Use?</h2>
             <div class="accordion" id="accordionExample">
