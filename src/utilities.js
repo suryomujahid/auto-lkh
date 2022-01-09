@@ -55,11 +55,32 @@ const submitForm = async (formId, day, entries) => {
     return $.ajax({
         url: url,
         type: 'GET',
+        beforeSend: function() {
+            let now = new Date;
+            let randomNum1 = Math.floor(Math.random() * 9);
+            let randomNum2 = Math.floor(Math.random() * 9);
+            $('#terminal-wannabe-textarea').append(
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
+            );
+            $('#terminal-wannabe-textarea').append(
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
+            );
+        },
         success: function(data) {
-            console.log(`suskes (${day})`);
+            let now = new Date;
+            let dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+
+            $('#terminal-wannabe-textarea').append(
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] SUCCESS Input LKH Hari ${dayNames[day.getDay()]}, ${day.getDate()}-${day.getMonth()+1}-${day.getFullYear()}&#13;&#10;`
+            );
         },
         error: function(xhr, status, error) {
-            console.log(error);
+            $('#terminal-wannabe-textarea').append(
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ERROR Terjadi Kesalahan Ketika Input LKH Hari ${dayNames[day.getDay()]}, ${day.getDate()}-${day.getMonth()+1}-${day.getFullYear()}&#13;&#10;`
+            );
+            $('#terminal-wannabe-textarea').append(
+                `Error: ${error} &#13;&#10;`
+            );
         }
     });
 }

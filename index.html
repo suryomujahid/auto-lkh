@@ -4,30 +4,117 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>auto lkh</title>
+    <title>Auto LKH</title>
+    <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 <body>
-    <center>
-        <h1>auto LKH</h1>
-        <h3>pake extension ini: <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">link</a></h3>
-        <h4>(disable extensionnya klo dah selese)</h4>
-
-        <label for="rayon">lkh rayon:</label>
-        <select name="rayon" id="rayon"></select><br>
-        <label for="time_start">dari:</label>
-        <input type="date" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'> - sampe sekarang <br>
-        <label for="no_absen">no absen:</label>
-        <input type="number" name="no_absen" id="no-absen"><br>
-        <input type="checkbox" id="religion" name="religion" disabled>
-        <label for="religion">islam (opsional)</label><br>
-        <input type="checkbox" id="k-10" name="k_10">
-        <label for="k-10">kelas 10 (opsional)</label><br>
-
-        <button id="gas" type="button">gas</button><br>
+    <div class="d-flex justify-content-center flex-column align-items-center">
+        <h1>AutoLKH</h1>
+        <a href="#tutorial">Click for Tutorial</a>
+        <div class="form-group mb-0 w-25">
+            <label class="form-label mt-1 mr-2" for="rayon"><h4>Rayon :</h4></label>
+            <select class="form-select form-control" name="rayon" id="rayon">
+            </select>
+        </div>
+        <div class="form-group mb-0 w-25">
+            <label for="time_start" class="form-label mt-3 mb-1"><h4>Dari :</h4></label>
+            <input type="date" class="form-control" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'/>
+            <label for="time_start" class="form-label mt-2"><h5>Sampai Hari Ini</h5></label>
+        </div>
+        <div class="form-group w-25">
+            <label for="no_absen" class="form-label mt-2 mb-1"><h4>No Absen :</h4></label>
+            <input type="number" name="no_absen" id="no-absen" class="form-control"/>
+        </div>
+        <fieldset class="form-group w-25 mb-2">
+            <legend class="mt-4">Additional Info</legend>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="religion" name="religion" disabled>
+                <label class="form-check-label" for="religion">
+                    Islam (opsional) - skip for now
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="k-10" name="k_10">
+                <label class="form-check-label" for="k-10">
+                    Kelas 10 (opsional)
+                </label>
+            </div>
+        </fieldset>
+        <button id="gas" type="button" class="btn btn-lg btn-dark bg-dark text-white">Gaskeun</button><br>
         <h2 id="loading"></h2>
-    </center>
+    </div>
 
+    <div class="row mx-5">
+        <div class="col" id="tutorial">
+            <h2>How To Use?</h2>
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                            #1 Install Extension CORS
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                        <div class="accordion-body">
+                            Sebelum mulai pake diwajibkan install ekstensi Chrome untuk mengizinkan CORS (karena halaman ini akan melakukan request ke gform)
+                            <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">Link Download</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            #2 Aktifkan Extension
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Aktifkan ekstensi dengan mengklik tombol extension (icon puzzle) di kanan atas browser, kemudian klik ekstensi <strong>Allow CORS</strong>. Akan muncul menu dengan huruf C besar, klik huruf tersebut dan jika sudah berwarna artinya ekstensi sudah berjalan
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            #3 Isi Data Diri
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Masukan data sesuai rayon, nomor absen dan tanggal mulai auto input LKH. Pilihan checkbox kelas 10 digunakan untuk input kegiatan pramuka sementara checkbox islam digunakan untuk pengajian malam. <br>
+                            <h5 class="mt-2">PENTING</h5>
+                            <strong>DIMOHON UNTUK TIDAK MELAKUKAN SPAM KARENA JIKA TERDETEKSI SPAM KEMUNGKINAN BESAR GFORM LKH AKAN DITAMBAHKAN AUTENTIKASI.</strong><br>
+                            <strong>KAMI TIDAK MENYIMPAN DATA DIRI ANDA (KECUALI JIKA ANDA MELAKUKAN SPAM, NO ABSEN ANDA AKAN DI BLACKLIST DARI PENGUNAAN AutoLKH INI.</strong>
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            #4 Klik Tombol Gaskeun
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Jika semua data sudah terisi, klik tombol Gaskeun. Progress auto input LKH bisa dilihat di terminal sebelah kanan.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col">
+            <h2>Hacking Progress</h2>
+            <small>no, i'm just kidding. it's not really hacking</small>
+            <textarea class="w-100 terminal-textarea form-control" id="terminal-wannabe-textarea" cols="20" rows="10" readonly disabled></textarea>
+        </div>
+    </div>
+
+    <footer class="w-100 h-25 d-flex justify-content-center p-4 mt-4 bg-dark">
+        Developed by <strong class="mx-1">BertemuWaktu & ShortcutTutupAplikasi</strong> 2022
+    </footer>
+    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/constants.js"></script>
     <script type="text/javascript" src="src/utilities.js"></script>
     <script type="text/javascript" src="src/app.js"></script>

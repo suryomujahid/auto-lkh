@@ -35,6 +35,28 @@ const idsRayon = [
     'e/1FAIpQLSc8MiACKnu6hAf6Kj6diTgdSnyrXSrDp3DVobPcCd92QeZu1w',
 ];
 
+const tauntMessage = [
+    'yahaha wahyu',
+    'sedang mencuri pulsa anda',
+    'sedang menghack NASA',
+    'awas diciduk polisi',
+    'sedang menghack Instagram anda',
+    'sedang menghack akun Pri payer anda',
+    'sedang melihat galeri anda',
+    'sedang melaporkan ke tukang baso',
+]
+
+const tauntMessage2 = [
+    'HP anda akan segera terkunci',
+    'Laptop anda sekarang milik bersama',
+    'Data anda sudah diterima oleh OPM',
+    'Data anda sudah sampai ke tangan pemerintah Cina',
+    'Sedang mengirim data anda ke Israel',
+    'Sedang menyerahkan data anda ke Polisi',
+    'Sedang melaporkan ke pembimbing rayon anda',
+    'Data sudah masuk dark web',
+]
+
 const rayon = $("#rayon");
 
 const activities = ['T', 'B', 'O', 'M', 'S'];
