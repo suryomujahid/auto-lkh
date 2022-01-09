@@ -31,12 +31,8 @@ const spamLKH = async (formId) => {
 
     let now = new Date;
     let randomNum1 = Math.floor(Math.random() * 12);
-    let randomNum2 = Math.floor(Math.random() * 12);
     $('#terminal-wannabe-textarea').append(
         `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
-    );
-    $('#terminal-wannabe-textarea').append(
-        `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
     );
 
     let time = new Date(timeStart.val());

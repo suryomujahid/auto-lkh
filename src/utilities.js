@@ -55,6 +55,14 @@ const submitForm = async (formId, day, entries) => {
     return $.ajax({
         url: url,
         type: 'GET',
+        beforeSend: function() {
+            let now = new Date;
+            let randomNum2 = Math.floor(Math.random() * 12);
+
+            $('#terminal-wannabe-textarea').append(
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
+            );
+        },
         success: function(data) {
             let now = new Date;
             let dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
