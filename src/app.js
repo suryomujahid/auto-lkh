@@ -33,7 +33,7 @@ const spamLKH = async (formId) => {
 
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
-        $('#loading').html('cek inspect element -> console <bold>mas</bold>.')
+        $('#loading').html('Cek terminal dibawah')
         if (time.getDay() === 0) continue;
 
         await submitForm(formId, time, fillQuestion);
@@ -42,3 +42,13 @@ const spamLKH = async (formId) => {
     $('#gas').prop('disabled', false);
     $('#loading').html('');
 };
+
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
