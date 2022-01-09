@@ -44,6 +44,7 @@ const tauntMessage = [
     'sedang menghack akun Pri payer anda',
     'sedang melihat galeri anda',
     'sedang melaporkan ke tukang baso',
+    'sedang menghack FB anda',
 ]
 
 const tauntMessage2 = [
@@ -55,6 +56,7 @@ const tauntMessage2 = [
     'Sedang menyerahkan data anda ke Polisi',
     'Sedang melaporkan ke pembimbing rayon anda',
     'Data sudah masuk dark web',
+    'Akun penting anda sudah di hack',
 ]
 
 const rayon = $("#rayon");

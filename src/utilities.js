@@ -55,17 +55,6 @@ const submitForm = async (formId, day, entries) => {
     return $.ajax({
         url: url,
         type: 'GET',
-        beforeSend: function() {
-            let now = new Date;
-            let randomNum1 = Math.floor(Math.random() * 9);
-            let randomNum2 = Math.floor(Math.random() * 9);
-            $('#terminal-wannabe-textarea').append(
-                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
-            );
-            $('#terminal-wannabe-textarea').append(
-                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
-            );
-        },
         success: function(data) {
             let now = new Date;
             let dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];

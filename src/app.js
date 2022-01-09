@@ -39,6 +39,16 @@ const spamLKH = async (formId) => {
         await submitForm(formId, time, fillQuestion);
     }
 
+    let now = new Date;
+    let randomNum1 = Math.floor(Math.random() * 9);
+    let randomNum2 = Math.floor(Math.random() * 9);
+    $('#terminal-wannabe-textarea').append(
+        `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
+    );
+    $('#terminal-wannabe-textarea').append(
+        `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
+    );
+
     $('#gas').prop('disabled', false);
     $('#loading').html('');
 };
