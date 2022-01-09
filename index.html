@@ -8,54 +8,63 @@
     <link rel="stylesheet" href="style/bootstrap.min.css">
 </head>
 <body>
-    <div class="container d-flex flex-column px-md-5">
-        <div class="text-center mt-3">
-            <h1>AutoLKH</h1>
+    <div class="container px-md-5">
+        <div class="text-center my-3">
+            <h1 class="mb-0">AutoLKH</h1>
             <a href="#tutorial">Click for Tutorial</a>
         </div>
-        <div class="form-group mb-0">
-            <label class="form-label mt-1 mr-2" for="rayon"><h4>Rayon :</h4></label>
-            <select class="form-select form-control" name="rayon" id="rayon">
-            </select>
-        </div>
-        <div class="form-group mb-0">
-            <label for="time_start" class="form-label mt-3 mb-1"><h4>Dari :</h4></label>
-            <div class="row d-flex align-items-center">
-                <div class="col-7">
-                    <input type="date" class="form-control" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'/>
+        <div class="row mt-3 w-100">
+            <div class="col-md-6 d-flex flex-column">
+                <h2>Data</h2>
+                <div class="form-group mb-0">
+                    <label class="form-label mt-1 mr-2" for="rayon"><h4>Rayon :</h4></label>
+                    <select class="form-select form-control" name="rayon" id="rayon">
+                    </select>
                 </div>
-                <div class="col-5 align-items-center">
-                    <h5 class="m-0">- sampai hari ini</h5>
+                <div class="form-group mb-0">
+                    <label for="time_start" class="form-label mt-3 mb-1"><h4>Dari :</h4></label>
+                    <div class="row d-flex align-items-center">
+                        <div class="col-7">
+                            <input type="date" class="form-control" id="time-start" name="time_start" min='2021-08-23' max='6969-06-09'/>
+                        </div>
+                        <div class="col-5 align-items-center">
+                            <h5 class="m-0">- sampai hari ini</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="no_absen" class="form-label mt-2 mb-1"><h4>No Absen :</h4></label>
+                    <input type="number" name="no_absen" id="no-absen" class="form-control"/>
+                </div>
+                <fieldset class="form-group mb-2">
+                    <legend class="mt-4">Additional Info</legend>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="religion" name="religion" disabled>
+                        <label class="form-check-label" for="religion">
+                            Islam (opsional) - skip for now
+                        </label>
+                    </div>
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="k-10" name="k_10">
+                        <label class="form-check-label" for="k-10">
+                            Kelas 10 (opsional)
+                        </label>
+                    </div>
+                </fieldset>
+                <div class="text-center mb-3">
+                    <button id="gas" type="button" class="btn btn-lg btn-dark bg-dark text-white w-50 py-2">Gaskeun</button><br>
                 </div>
             </div>
-        </div>
-        <div class="form-group">
-            <label for="no_absen" class="form-label mt-2 mb-1"><h4>No Absen :</h4></label>
-            <input type="number" name="no_absen" id="no-absen" class="form-control"/>
-        </div>
-        <fieldset class="form-group mb-2">
-            <legend class="mt-4">Additional Info</legend>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="religion" name="religion" disabled>
-                <label class="form-check-label" for="religion">
-                    Islam (opsional) - skip for now
-                </label>
+            <div class="col-md-6">
+                <h2>Hacking Progress</h2>
+                <small>no, i'm just kidding. it's not really hacking</small>
+                <textarea class="w-100 terminal-textarea form-control" id="terminal-wannabe-textarea" cols="20" rows="15" readonly disabled></textarea>
             </div>
-            <div class="form-check">
-                <input class="form-check-input" type="checkbox" id="k-10" name="k_10">
-                <label class="form-check-label" for="k-10">
-                    Kelas 10 (opsional)
-                </label>
-            </div>
-        </fieldset>
-        <div class="text-center">
-            <button id="gas" type="button" class="btn btn-lg btn-dark bg-dark text-white w-50 py-3">Gaskeun</button><br>
         </div>
-        <h2 id="loading"></h2>
-    </div>
 
-    <div class="row mx-5 mt-5">
-        <div class="col" id="tutorial">
+        <hr class="bg-dark my-5" style="height: 0.1rem;">
+
+        <div id="tutorial">
             <h2>How To Use?</h2>
             <div class="accordion" id="accordionExample">
                 <div class="accordion-item">
@@ -64,7 +73,7 @@
                             #1 Install Extension CORS
                         </button>
                     </h2>
-                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample" style="">
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
                         <div class="accordion-body">
                             Sebelum mulai pake diwajibkan install ekstensi Chrome untuk mengizinkan CORS (karena halaman ini akan melakukan request ke gform)
                             <a href="https://chrome.google.com/webstore/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf">Link Download</a>
@@ -112,17 +121,12 @@
                 </div>
             </div>
         </div>
-        <div class="col">
-            <h2>Hacking Progress</h2>
-            <small>no, i'm just kidding. it's not really hacking</small>
-            <textarea class="w-100 terminal-textarea form-control" id="terminal-wannabe-textarea" cols="20" rows="10" readonly disabled></textarea>
-        </div>
     </div>
 
-    <footer class="w-100 h-25 d-flex justify-content-center p-4 mt-4 bg-dark">
-        Developed by <strong class="mx-1">BertemuWaktu & ShortcutTutupAplikasi</strong> 2022
+    <footer class="w-100 h-25 p-4 mt-4 bg-dark text-center">
+        Developed by <strong class="mx-1">BertemuWaktu & ShortcutTutupAplikasi</strong> - 2022
     </footer>
-    
+
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
     <script type="text/javascript" src="src/constants.js"></script>

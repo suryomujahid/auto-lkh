@@ -28,7 +28,7 @@ $('#gas').click(function() {
 const spamLKH = async (formId) => {
     idsQuestion = [];
     await getFormQuestions(formId);
-    
+
     let now = new Date;
     let randomNum1 = Math.floor(Math.random() * 12);
     let randomNum2 = Math.floor(Math.random() * 12);
@@ -38,21 +38,18 @@ const spamLKH = async (formId) => {
     $('#terminal-wannabe-textarea').append(
         `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
     );
-    
+
     let time = new Date(timeStart.val());
     let today = new Date();
-    const btnProcess = $('#gas');
 
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
-        $('#loading').html('Cek terminal dibawah')
         if (time.getDay() === 0) continue;
 
-        await submitForm(formId, time, fillQuestion);
+        // await submitForm(formId, time, fillQuestion);
     }
 
     $('#gas').prop('disabled', false);
-    $('#loading').html('');
 };
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
