@@ -40,7 +40,6 @@ const spamLKH = async (formId) => {
 
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
-        if (time.getDay() === 0) continue;
 
         await submitForm(formId, time, fillQuestion);
     }
