@@ -31,6 +31,7 @@ const spamLKH = async (formId) => {
 
     let now = new Date;
     let randomNum1 = Math.floor(Math.random() * 12);
+    $('#terminal-wannabe-textarea').html('');
     $('#terminal-wannabe-textarea').append(
         `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
     );
@@ -40,6 +41,7 @@ const spamLKH = async (formId) => {
 
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
+        if (time.getDay() !== 0) continue;
 
         await submitForm(formId, time, fillQuestion);
     }
