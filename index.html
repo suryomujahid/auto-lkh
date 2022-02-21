@@ -36,6 +36,19 @@
                     <label for="no_absen" class="form-label mt-2 mb-1"><h4>No Absen :</h4></label>
                     <input type="number" name="no_absen" id="no-absen" class="form-control"/>
                 </div>
+                <div class="form-group mb-0">
+                    <label class="form-label mt-1 mr-2" for="interval"><h4>Jeda :</h4></label>
+                    <select class="form-select form-control" name="interval" id="interval">
+                        <option value="5000">5 detik</option>
+                        <option value="6000">6 detik</option>
+                        <option value="7000">7 detik</option>
+                        <option value="8000">8 detik</option>
+                        <option value="9000">9 detik</option>
+                        <option value="10000">10 detik</option>
+                        <option value="15000">15 detik</option>
+                    </select>
+                    <small>Jika form sedang ramai input gunakan jeda yang agak panjang (agar tidak dianggap spam)</small>
+                </div>
                 <fieldset class="form-group mb-2">
                     <legend class="mt-4">Additional Info</legend>
                     <div class="form-check">

@@ -57,10 +57,10 @@ const submitForm = async (formId, day, entries) => {
         type: 'GET',
         beforeSend: function() {
             let now = new Date;
-            let randomNum2 = Math.floor(Math.random() * 12);
+            let randomNum2 = Math.floor(Math.random() * 25);
 
             $('#terminal-wannabe-textarea').append(
-                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage2[randomNum2]}&#13;&#10;`
+                `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ${tauntMessage[randomNum2]}&#13;&#10;`
             );
         },
         success: function(data) {
@@ -80,4 +80,12 @@ const submitForm = async (formId, day, entries) => {
             );
         }
     });
+}
+
+function sleep(milliseconds) {
+    const date = Date.now();
+    let currentDate = null;
+    do {
+        currentDate = Date.now();
+    } while (currentDate - date < milliseconds);
 }

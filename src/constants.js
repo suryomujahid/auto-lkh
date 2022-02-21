@@ -48,9 +48,6 @@ const tauntMessage = [
     'sedang mengambil kode nuklir Amerika',
     'sedang menghubungi Kim Jong Un',
     'sedang mengirim data ke ormas',
-]
-
-const tauntMessage2 = [
     'HP anda akan segera terkunci',
     'Laptop anda sekarang milik bersama',
     'Data anda sudah diterima oleh OPM',
@@ -63,6 +60,7 @@ const tauntMessage2 = [
     'Rudal telah dikirim ke Israel',
     'Ingfo sudah diterima Pak Jokowi',
     'Nasi bungkus sudah diterima',
+    'Pemuda pancasila sedang otw ke rumah anda',
 ]
 
 const rayon = $("#rayon");
@@ -76,3 +74,5 @@ const timeStart = $('#time-start');
 const isIslam = $('#religion');
 
 const isTen = $('#k-10');
+
+const interval = $('#interval')
