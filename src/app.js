@@ -38,7 +38,6 @@ const spamLKH = async (formId) => {
 
     let time = new Date(timeStart.val());
     let today = new Date();
-        
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
 

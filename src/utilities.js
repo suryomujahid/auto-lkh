@@ -72,6 +72,9 @@ const submitForm = async (formId, day, entries) => {
             );
         },
         error: function(xhr, status, error) {
+            let now = new Date;
+            let dayNames = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jumat', 'Sabtu'];
+            
             $('#terminal-wannabe-textarea').append(
                 `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] ERROR Terjadi Kesalahan Ketika Input LKH Hari ${dayNames[day.getDay()]}, ${day.getDate()}-${day.getMonth()+1}-${day.getFullYear()}&#13;&#10;`
             );
