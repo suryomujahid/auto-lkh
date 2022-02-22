@@ -30,7 +30,7 @@ const spamLKH = async (formId) => {
     await getFormQuestions(formId);
 
     let now = new Date;
-    let randomNum1 = Math.floor(Math.random() * 12);
+    let randomNum1 = Math.floor(Math.random() * 25);
     $('#terminal-wannabe-textarea').html('');
     $('#terminal-wannabe-textarea').append(
         `[${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}] Memulai proses hacking, ${tauntMessage[randomNum1]} &#13;&#10;`
@@ -38,11 +38,12 @@ const spamLKH = async (formId) => {
 
     let time = new Date(timeStart.val());
     let today = new Date();
-
     for (time; time <= today; time.setDate(time.getDate() + 1)) {
         $('#gas').prop('disabled', true);
 
         await submitForm(formId, time, fillQuestion);
+
+        sleep(parseInt(interval.val()));
     }
 
     $('#gas').prop('disabled', false);
